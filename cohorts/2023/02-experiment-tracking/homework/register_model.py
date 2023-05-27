@@ -40,6 +40,9 @@ def train_and_log_model(data_path, params):
         test_rmse = mean_squared_error(y_test, rf.predict(X_test), squared=False)
         mlflow.log_metric("test_rmse", test_rmse)
 
+        # Log the random forest regressor model
+        mlflow.sklearn.log_model(rf, artifact_path="models_mlflow")
+
 
 @click.command()
 @click.option(
@@ -70,10 +73,14 @@ def run_register_model(data_path: str, top_n: int):
 
     # Select the model with the lowest test RMSE
     experiment = client.get_experiment_by_name(EXPERIMENT_NAME)
-    # best_run = client.search_runs( ...  )[0]
+    best_run = client.search_runs(
+        experiment_ids=experiment.experiment_id,
+        #run_view_type=ViewType.ACTIVE_ONLY,
+        order_by=["metrics.test_rmse ASC"])[0]
 
     # Register the best model
-    # mlflow.register_model( ... )
+    best_model_uri = "runs:/{}/model".format(best_run.info.run_id)
+    mlflow.register_model(model_uri=best_model_uri, name="best-regressor-model")
 
 
 if __name__ == '__main__':
