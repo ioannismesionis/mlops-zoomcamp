@@ -1,10 +1,13 @@
 import os
 import pickle
 import click
+import mlflow
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
+mlflow.set_tracking_uri("sqlite:///backend.db")
+mlflow.set_experiment("homework2-tracking")
 
 def load_pickle(filename: str):
     with open(filename, "rb") as f_in:
@@ -18,6 +21,9 @@ def load_pickle(filename: str):
     help="Location where the processed NYC taxi trip data was saved"
 )
 def run_train(data_path: str):
+
+    # Add sklearn flavor autologging
+    mlflow.sklearn.autolog()
 
     X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
     X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
