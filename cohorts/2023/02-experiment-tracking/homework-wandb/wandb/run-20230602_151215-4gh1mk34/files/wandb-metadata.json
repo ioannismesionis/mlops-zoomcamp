@@ -1,0 +1,41 @@
+{
+    "os": "macOS-13.4-arm64-arm-64bit",
+    "python": "3.9.6",
+    "heartbeatAt": "2023-06-02T14:12:16.110874",
+    "startedAt": "2023-06-02T14:12:15.260633",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--wandb_project",
+        "mlops-zoomcamp-wandb",
+        "--wandb_entity",
+        "ioannis-mesionis",
+        "--data_artifact",
+        "ioannis-mesionis/mlops-zoomcamp-wandb/NYC-Taxi:v0"
+    ],
+    "state": "running",
+    "program": "/Users/atawua/Desktop/Data Science/GitHub/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework-wandb/sweep.py",
+    "codePath": "cohorts/2023/02-experiment-tracking/homework-wandb/sweep.py",
+    "git": {
+        "remote": "https://github.com/ioannismesionis/mlops-zoomcamp.git",
+        "commit": "0bb528c625578271d5356611c3e93543d3265586"
+    },
+    "email": null,
+    "root": "/Users/atawua/Desktop/Data Science/GitHub/mlops-zoomcamp",
+    "host": "Atawuas-MacBook-Pro.local",
+    "username": "atawua",
+    "executable": "/Users/atawua/Desktop/Data Science/GitHub/mlops-zoomcamp/venv/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "total": 460.4317207336426,
+        "used": 8.439708709716797
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}
