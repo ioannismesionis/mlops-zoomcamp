@@ -54,17 +54,16 @@ class TestPrepareData(object):
         expected_columns = ["ride_id", "predicted_duration"]
         expected_data = [
             ("2022/02_0", 24.781802),
-            ("2022/02_1", 24.781802),
-            ("2022/02_2", 24.781802),
-            ("2022/02_3", 24.781802),
-            ("2022/02_4", 24.781802),
-            ("2022/02_5", 24.781802),
+            ("2022/02_1", 0.617543),
+            ("2022/02_2", 6.108105),
         ]
         expected_df = pd.DataFrame(expected_data, columns=expected_columns)
 
         # Manually add the read_data() function transformations
         df["duration"] = df.tpep_dropoff_datetime - df.tpep_pickup_datetime
         df["duration"] = df.duration.dt.total_seconds() / 60
+
+        categorical = ["PULocationID", "DOLocationID"]
 
         df = df[(df.duration >= 1) & (df.duration <= 60)].copy()
 
@@ -74,4 +73,4 @@ class TestPrepareData(object):
         actual_df = prepare_data(df, 2022, 2, ["PULocationID", "DOLocationID"])
 
         print(actual_df)
-        # pd.testing.assert_frame_equal(actual_df, expected_df)
+        pd.testing.assert_frame_equal(actual_df, expected_df)
