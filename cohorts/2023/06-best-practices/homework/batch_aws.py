@@ -43,14 +43,16 @@ def prepare_data(df, year, month, categorical):
 # @click.option("--year", default=2022, help="Define the year")
 # @click.option("--month", default=2, help="Define the month")
 def main(year, month, categorical=["PULocationID", "DOLocationID"]):
-    INPUT_FILE = f"https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_{year:04d}-{month:02d}.parquet"
-    OUTPUT_FILE = f"taxi_type=yellow_year={year:04d}_month={month:02d}.parquet"
+    INPUT_FILE = "taxi_type_test_data=yellow_year=2022_month=02.parquet"
+    OUTPUT_FILE = f"taxi_type_aws=yellow_year={year:04d}_month={month:02d}.parquet"
 
     df = read_data(INPUT_FILE, categorical)
 
     df_result = prepare_data(df, year, month, categorical)
 
     df_result.to_parquet(OUTPUT_FILE, engine="pyarrow", index=False)
+
+    print("Total sum:", df_result["predicted_duration"].sum())
 
 
 if __name__ == "__main__":
