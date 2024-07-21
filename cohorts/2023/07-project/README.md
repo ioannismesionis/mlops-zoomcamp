@@ -21,7 +21,7 @@ Peer reviewing:
 * Form: https://forms.gle/MRMHDuFiP6DFShaj7
 * Deadline: 10 August, 23:00 CEST
 
-Project feedback: TBA ("feedback-01" tab)
+Project feedback: [link](https://docs.google.com/spreadsheets/d/e/2PACX-1vTS8Mlu6sWyu6JinFUftUl6OB5mxXlwGT2icIyQCSbhDDmW36WWyAbv2dCFJhng6Nln0o3cwvTchjcU/pubhtml?gid=0&single=true) ("feedback-01" tab)
 
 
 
@@ -29,16 +29,16 @@ Project feedback: TBA ("feedback-01" tab)
 
 Project:
 
-* Form: TBA
-* Deadline: TBA
+* Form: https://forms.gle/o1s3NmYE4UmFSMVD7
+* Deadline: 21 August (Monday), 23:00 CEST
 
 Peer reviewing:
 
-* Peer review assignments: TBA ("project 2" tab)
-* Form: TBA
-* Deadline: TBA
+* Peer review assignments: [link](https://docs.google.com/spreadsheets/d/e/2PACX-1vTAztxXsLidZV8I18gL9_qtJpxhyvyhJsEeXrP3kFyZoauGgR-S4p6b7H5yJ9kdTbUE5wAAvZgTTZ49/pubhtml?gid=1942033009&single=true) ("project 2" tab)
+* Form: https://forms.gle/R4Y58WSxGDWsDBFv7
+* Deadline: 29 August (Tuesday), 23:00 CEST
 
-Project feedback: TBA ("feedback-02" tab)
+Project feedback: [link](https://docs.google.com/spreadsheets/d/e/2PACX-1vTS8Mlu6sWyu6JinFUftUl6OB5mxXlwGT2icIyQCSbhDDmW36WWyAbv2dCFJhng6Nln0o3cwvTchjcU/pubhtml?gid=546664034&single=true) ("feedback-02" tab)
 
 
 
